@@ -60,7 +60,10 @@ export default function Index() {
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Icon name="Shield" className="text-primary" size={32} />
-            <span className="text-2xl font-bold">ЩИТ</span>
+            <div className="flex flex-col">
+              <span className="text-xl font-bold leading-tight">ПЛАТИНА</span>
+              <span className="text-xs text-muted-foreground">группа компаний</span>
+            </div>
           </div>
           <nav className="hidden md:flex items-center gap-8">
             <a href="#services" className="text-foreground/80 hover:text-primary transition-colors">Услуги</a>
@@ -81,7 +84,7 @@ export default function Index() {
               <span className="text-primary">вашей безопасности</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Комплексные решения по обеспечению безопасности для бизнеса и частных лиц. 
+              Комплексные решения по обеспечению безопасности для бизнеса и частных лиц в Казани. 
               Лицензия, опыт, надежность.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -291,7 +294,7 @@ export default function Index() {
                 <CardContent className="pt-6 text-center">
                   <Icon name="MapPin" className="text-primary mx-auto mb-4" size={32} />
                   <h3 className="font-semibold mb-2">Адрес</h3>
-                  <p className="text-muted-foreground">Москва, ул. Примерная, 123</p>
+                  <p className="text-muted-foreground">Казань, ул. Баумана, 58</p>
                   <p className="text-sm text-muted-foreground mt-1">Пн-Вс 9:00-21:00</p>
                 </CardContent>
               </Card>
@@ -305,10 +308,13 @@ export default function Index() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2">
               <Icon name="Shield" className="text-primary" size={24} />
-              <span className="font-bold">ЩИТ</span>
+              <div className="flex flex-col">
+                <span className="font-bold leading-tight">ПЛАТИНА</span>
+                <span className="text-xs text-muted-foreground">группа компаний</span>
+              </div>
             </div>
             <p className="text-sm text-muted-foreground text-center">
-              © 2024 Охранная компания ЩИТ. Все права защищены. Лицензия № 123456
+              © 2024 Группа компаний ПЛАТИНА. Все права защищены. Лицензия № 123456
             </p>
             <div className="flex gap-4">
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
