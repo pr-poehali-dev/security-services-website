@@ -16,6 +16,7 @@ export default function Index() {
     service: '',
     message: '',
   });
+  const [showCallButton, setShowCallButton] = useState(true);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -86,7 +87,7 @@ export default function Index() {
               <span className="text-primary">вашей безопасности</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Комплексные решения по обеспечению безопасности для бизнеса и частных лиц в Казани. 
+              Комплексные решения по обеспечению безопасности для бизнеса и частных лиц по всей России. 
               Лицензия, опыт, надежность.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -427,12 +428,12 @@ export default function Index() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-5xl font-bold mb-8">Контакты</h2>
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
               <Card className="border-border bg-card">
                 <CardContent className="pt-6 text-center">
                   <Icon name="Phone" className="text-primary mx-auto mb-4" size={32} />
-                  <h3 className="font-semibold mb-2">Телефон</h3>
-                  <p className="text-muted-foreground">+7 (495) 123-45-67</p>
+                  <h3 className="font-semibold mb-2">WhatsApp</h3>
+                  <a href="https://wa.me/79874199611" className="text-muted-foreground hover:text-primary transition-colors">+7 (987) 419-96-11</a>
                   <p className="text-sm text-muted-foreground mt-1">Круглосуточно</p>
                 </CardContent>
               </Card>
@@ -440,19 +441,12 @@ export default function Index() {
                 <CardContent className="pt-6 text-center">
                   <Icon name="Mail" className="text-primary mx-auto mb-4" size={32} />
                   <h3 className="font-semibold mb-2">Email</h3>
-                  <p className="text-muted-foreground">info@shield-security.ru</p>
+                  <a href="mailto:matrix-7979@mail.ru" className="text-muted-foreground hover:text-primary transition-colors">matrix-7979@mail.ru</a>
                   <p className="text-sm text-muted-foreground mt-1">Ответим в течение часа</p>
                 </CardContent>
               </Card>
-              <Card className="border-border bg-card">
-                <CardContent className="pt-6 text-center">
-                  <Icon name="MapPin" className="text-primary mx-auto mb-4" size={32} />
-                  <h3 className="font-semibold mb-2">Адрес</h3>
-                  <p className="text-muted-foreground">Казань, ул. Баумана, 58</p>
-                  <p className="text-sm text-muted-foreground mt-1">Пн-Вс 9:00-21:00</p>
-                </CardContent>
-              </Card>
             </div>
+            <p className="text-muted-foreground mt-8">Работаем по всей России: Казань, Москва, Санкт-Петербург и другие регионы</p>
           </div>
         </div>
       </section>
@@ -471,16 +465,28 @@ export default function Index() {
               © 2024 Группа компаний ПЛАТИНА. Все права защищены. Лицензия № 123456
             </p>
             <div className="flex gap-4">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://wa.me/79874199611" className="text-muted-foreground hover:text-primary transition-colors">
                 <Icon name="Phone" size={20} />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="mailto:matrix-7979@mail.ru" className="text-muted-foreground hover:text-primary transition-colors">
                 <Icon name="Mail" size={20} />
               </a>
             </div>
           </div>
         </div>
       </footer>
+
+      {showCallButton && (
+        <a
+          href="https://wa.me/79874199611"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="fixed bottom-6 right-6 w-16 h-16 bg-[#25D366] hover:bg-[#20BA5A] rounded-full shadow-lg flex items-center justify-center transition-all hover:scale-110 z-50 animate-fade-in"
+          aria-label="Написать в WhatsApp"
+        >
+          <Icon name="MessageCircle" className="text-white" size={28} />
+        </a>
+      )}
     </div>
   );
 }
