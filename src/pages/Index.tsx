@@ -92,7 +92,7 @@ export default function Index() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild className="text-lg">
-                <a href="#order">Получить консультацию</a>
+                <a href="https://wa.me/79874199611">Получить консультацию</a>
               </Button>
               <Button size="lg" variant="outline" asChild className="text-lg">
                 <a href="#services">Наши услуги</a>
@@ -344,85 +344,7 @@ export default function Index() {
         </div>
       </section>
 
-      <section id="order" className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-2xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-5xl font-bold mb-4">Заказать услугу</h2>
-              <p className="text-lg text-muted-foreground">
-                Оставьте заявку и наш специалист свяжется с вами для расчета стоимости
-              </p>
-            </div>
 
-            <Card className="border-border bg-card">
-              <CardContent className="pt-6">
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="space-y-2">
-                    <Label htmlFor="name">Имя *</Label>
-                    <Input
-                      id="name"
-                      placeholder="Ваше имя"
-                      required
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="phone">Телефон *</Label>
-                    <Input
-                      id="phone"
-                      type="tel"
-                      placeholder="+7 (___) ___-__-__"
-                      required
-                      value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="service">Выберите услугу *</Label>
-                    <Select
-                      value={formData.service}
-                      onValueChange={(value) => setFormData({ ...formData, service: value })}
-                      required
-                    >
-                      <SelectTrigger>
-                        <SelectValue placeholder="Выберите услугу" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="object">Охрана объектов</SelectItem>
-                        <SelectItem value="personal">Личная охрана</SelectItem>
-                        <SelectItem value="video">Видеонаблюдение</SelectItem>
-                        <SelectItem value="consultation">Консультация</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="message">Комментарий</Label>
-                    <Textarea
-                      id="message"
-                      placeholder="Расскажите подробнее о ваших потребностях..."
-                      rows={4}
-                      value={formData.message}
-                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    />
-                  </div>
-
-                  <Button type="submit" className="w-full" size="lg">
-                    Отправить заявку
-                  </Button>
-
-                  <p className="text-xs text-center text-muted-foreground">
-                    Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности
-                  </p>
-                </form>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
 
       <section id="contact" className="py-20 bg-secondary/30">
         <div className="container mx-auto px-4">
@@ -462,7 +384,7 @@ export default function Index() {
               </div>
             </div>
             <p className="text-sm text-muted-foreground text-center">
-              © 2024 Группа компаний ПЛАТИНА. Все права защищены. Лицензия № 123456
+              © 2026 Группа компаний ПЛАТИНА. Все права защищены. Лицензия № 123456
             </p>
             <div className="flex gap-4">
               <a href="https://wa.me/79874199611" className="text-muted-foreground hover:text-primary transition-colors">
