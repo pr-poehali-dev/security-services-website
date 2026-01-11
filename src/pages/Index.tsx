@@ -67,6 +67,8 @@ export default function Index() {
           </div>
           <nav className="hidden md:flex items-center gap-8">
             <a href="#services" className="text-foreground/80 hover:text-primary transition-colors">Услуги</a>
+            <a href="#cases" className="text-foreground/80 hover:text-primary transition-colors">Кейсы</a>
+            <a href="#testimonials" className="text-foreground/80 hover:text-primary transition-colors">Отзывы</a>
             <a href="#about" className="text-foreground/80 hover:text-primary transition-colors">О компании</a>
             <a href="#contact" className="text-foreground/80 hover:text-primary transition-colors">Контакты</a>
           </nav>
@@ -185,6 +187,158 @@ export default function Index() {
                 </CardHeader>
               </Card>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="cases" className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">Наши кейсы</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Реальные истории защиты бизнеса наших клиентов
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <Card className="border-border bg-card hover-scale">
+              <CardHeader>
+                <div className="w-full h-40 bg-primary/10 rounded-lg mb-4 flex items-center justify-center">
+                  <Icon name="Building2" className="text-primary" size={48} />
+                </div>
+                <CardTitle>ТЦ "Кольцо"</CardTitle>
+                <CardDescription>
+                  Комплексная охрана торгового центра площадью 25 000 м². Предотвращено 15+ инцидентов за год, сокращены потери от краж на 87%
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <Icon name="Calendar" size={16} />
+                  <span>2 года сотрудничества</span>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-border bg-card hover-scale">
+              <CardHeader>
+                <div className="w-full h-40 bg-primary/10 rounded-lg mb-4 flex items-center justify-center">
+                  <Icon name="Factory" className="text-primary" size={48} />
+                </div>
+                <CardTitle>Завод "ТехМаш"</CardTitle>
+                <CardDescription>
+                  Охрана производственного комплекса с режимом повышенной секретности. Установлено 40 камер видеонаблюдения, контроль доступа
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <Icon name="Calendar" size={16} />
+                  <span>3 года сотрудничества</span>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-border bg-card hover-scale">
+              <CardHeader>
+                <div className="w-full h-40 bg-primary/10 rounded-lg mb-4 flex items-center justify-center">
+                  <Icon name="Users" className="text-primary" size={48} />
+                </div>
+                <CardTitle>VIP-мероприятие</CardTitle>
+                <CardDescription>
+                  Обеспечение безопасности бизнес-конференции на 500+ участников. Личная охрана спикеров, контроль периметра, аккредитация гостей
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <Icon name="Calendar" size={16} />
+                  <span>Проведено 12 мероприятий</span>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonials" className="py-20 bg-secondary/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">Отзывы клиентов</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Что говорят о нас наши партнеры
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <Card className="border-border bg-card">
+              <CardHeader>
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
+                    <Icon name="User" className="text-primary" size={24} />
+                  </div>
+                  <div>
+                    <CardTitle className="text-lg">Алексей Иванов</CardTitle>
+                    <p className="text-sm text-muted-foreground">Директор ТЦ "Кольцо"</p>
+                  </div>
+                </div>
+                <CardDescription className="text-base">
+                  "Сотрудничаем с ПЛАТИНА уже 2 года. Профессиональная команда, быстрое реагирование на инциденты. Значительно сократили потери от краж. Рекомендую!"
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex gap-1">
+                  {[1,2,3,4,5].map((star) => (
+                    <Icon key={star} name="Star" className="text-accent fill-accent" size={16} />
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-border bg-card">
+              <CardHeader>
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
+                    <Icon name="User" className="text-primary" size={24} />
+                  </div>
+                  <div>
+                    <CardTitle className="text-lg">Марина Петрова</CardTitle>
+                    <p className="text-sm text-muted-foreground">Владелец сети ресторанов</p>
+                  </div>
+                </div>
+                <CardDescription className="text-base">
+                  "Установили видеонаблюдение во всех наших заведениях. Теперь контролируем всё удаленно с телефона. Удобно, надежно, качественная техника."
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex gap-1">
+                  {[1,2,3,4,5].map((star) => (
+                    <Icon key={star} name="Star" className="text-accent fill-accent" size={16} />
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-border bg-card">
+              <CardHeader>
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
+                    <Icon name="User" className="text-primary" size={24} />
+                  </div>
+                  <div>
+                    <CardTitle className="text-lg">Дмитрий Соколов</CardTitle>
+                    <p className="text-sm text-muted-foreground">Генеральный директор ООО "ТехМаш"</p>
+                  </div>
+                </div>
+                <CardDescription className="text-base">
+                  "Охрана нашего завода — сложная задача. ПЛАТИНА справилась на отлично. Аттестованные специалисты, строгое соблюдение режима секретности."
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex gap-1">
+                  {[1,2,3,4,5].map((star) => (
+                    <Icon key={star} name="Star" className="text-accent fill-accent" size={16} />
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
