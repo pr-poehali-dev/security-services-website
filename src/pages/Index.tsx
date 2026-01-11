@@ -74,7 +74,7 @@ export default function Index() {
             <a href="#contact" className="text-foreground/80 hover:text-primary transition-colors">Контакты</a>
           </nav>
           <Button asChild>
-            <a href="#order">Заказать услугу</a>
+            <a href="https://wa.me/79874199611">WhatsApp</a>
           </Button>
         </div>
       </header>
@@ -92,7 +92,7 @@ export default function Index() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild className="text-lg">
-                <a href="https://wa.me/79874199611">Получить консультацию</a>
+                <a href="https://wa.me/79874199611">Связаться с нами</a>
               </Button>
               <Button size="lg" variant="outline" asChild className="text-lg">
                 <a href="#services">Наши услуги</a>
